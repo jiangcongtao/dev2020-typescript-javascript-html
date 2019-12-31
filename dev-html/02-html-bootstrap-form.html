@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap 4 Form</title>
+    <!-- bootstrap 4 css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        * {
+            font-size: 1.2rem;
+        }
+
+        h3 {
+            border: 5 px;
+            color: blue;
+        }
+
+        /* customize bootstrap button style */
+        .btn {
+            padding-left: 3rem;
+            padding-right: 3rem;
+            font-size: 2rem;
+            border-radius: 0rem;
+            font-weight: 600;
+        }
+
+        form {
+            padding: 3rem;
+            background-color: rgb(247, 224, 215);
+        }
+        form-group {
+            margin-top: 1.5rem;
+        }
+        
+        label {
+            font-weight: 600;
+            color: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Bootstrap 4 Form!</h2>
+        <h3>Form 1</h3>
+        <hr>
+        <div>
+            <form class="needs-validation" novalidate>
+                <div class="form-group ">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter email.
+                    </div>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleInputPassword1" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="customRange1">Example range</label>
+                    <input type="range" class="custom-range" id="customRange1">
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
+                        <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Example file input</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputBirth">Birth</label>
+                    <input type="date" class="form-control" id="exampleInputBirth" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Example multiple select</label>
+                    <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <!-- Boostrap javascript dependencies and plugins -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
