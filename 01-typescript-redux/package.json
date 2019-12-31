@@ -1,0 +1,19 @@
+{
+  "name": "01-typescript-redux",
+  "version": "1.0.0",
+  "description": "tsc src\\HelloWorld.ts --outFile dist\\HelloWorld.js",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/redux": "^3.6.0",
+    "redux": "^4.0.5"
+  }
+}
